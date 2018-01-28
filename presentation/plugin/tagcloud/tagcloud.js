@@ -55,29 +55,29 @@
          * @param {DOM Element} the tag to calculate the size of.
          * @return {Number} the percentage to set the font size to
          **/
-        function calcSize(elem) {
-            var prctnge;
+        function calcPercentage(elem) {
+            var percentage;
 
             // At least one of our cloud items is weighted, base sizes around weights
             if( weights.length > 0 ) {
                 var itemWeight = elem.getAttribute('tagcloud-weight') || 0;
                 var numerator = itemWeight - lowerBound;
-                prctnge = (numerator / denominator) * 150 + 50;
+                percentage = (numerator / denominator) * 150 + 50;
             }
             // None of the cloud items are weighted, base the size randomly
             else {
-                prctnge = Math.random() * 150 + 50;
+                percentage = Math.random() * 150 + 50;
             }
 
             if (cloud.hasAttribute('large')) {
-                prctnge = prctnge * 1.2;
+                percentage = percentage * 1.2;
             }
 
             if (cloud.hasAttribute('small')) {
-                prctnge = prctnge * 0.8;
+                percentage = percentage * 0.8;
             }
 
-            return prctnge;
+            return percentage;
         }
 
         /**
@@ -110,7 +110,7 @@
 
         // Size and colour the cloud tags
         [].forEach.call( cloud.querySelectorAll('span'), function(elem) {
-            elem.style.fontSize = calcSize(elem) + '%';
+            elem.style.fontSize = calcPercentage(elem) + '%';
             elem.classList.add('clouditem');
             if( elem.hasAttribute('tagcloud-link') ) {
                 newelem = document.createElement('a');
