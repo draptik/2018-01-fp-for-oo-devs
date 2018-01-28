@@ -52,19 +52,6 @@ todo
 
 <<= x =>>
 
-
-<!-- 
-<section tagcloud shuffle>
-    <span tagcloud-weight="55">Immutability</span>
-    <span tagcloud-weight="40">Higher Order Functions λ</span>
-    <span tagcloud-weight="10">Monade</span> <span tagcloud-weight="10">Functor</span> <span tagcloud-weight="10">Monoid</span>
-    <span tagcloud-weight="30">Currying</span> <span tagcloud-weight="30">Applicatives</span>
-    <span tagcloud-weight="5">Currying</span>
-    <span tagcloud-weight="5">Currying</span>
-<section>     -->
-
-<<= x =>>
-
 ## FP Konzepte
 
 <<= x =>>
