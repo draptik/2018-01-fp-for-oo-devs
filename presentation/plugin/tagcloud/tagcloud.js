@@ -1,3 +1,4 @@
+// Original from https://github.com/sebhildebrandt/reveal.js-tagcloud-plugin
 // tagcloud
 (function(){
     [].forEach.call( document.querySelectorAll('[tagcloud]'), function(cloud) {
