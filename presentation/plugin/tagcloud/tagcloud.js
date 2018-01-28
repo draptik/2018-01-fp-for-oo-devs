@@ -41,7 +41,7 @@
                 return item.trim() !== '';
             })
             .map(function(item) {
-            return ( item.indexOf('span') === -1 ) ? '<span>' + item.trim() + '</span> ' : item.trim();
+                return ( item.indexOf('span') === -1 ) ? '<span>' + item.trim() + '</span> ' : item.trim();
             })
             .join("");
 
@@ -71,6 +71,10 @@
 
             if (cloud.hasAttribute('large')) {
                 prctnge = prctnge * 1.2;
+            }
+
+            if (cloud.hasAttribute('small')) {
+                prctnge = prctnge * 0.8;
             }
 
             return prctnge;
