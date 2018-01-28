@@ -73,3 +73,9 @@ img[alt^=fullscreen-] {width: 100%; }
     box-shadow: none;
     width: 644px;
 }
+
+span.clouditem {
+    padding-left: 0.15em;
+    padding-right: 0.15em;
+    line-height: 80%;
+}

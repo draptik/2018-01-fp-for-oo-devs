@@ -6,7 +6,14 @@ Patrick Drechsler
 
 <<= x =>>
 
-## Was ist FP?
+## Was ist Funktionale Programmierung?
+
+- Sprachunabhängig
+- **Nur ein Paradigma!**
+    - andere Paradigmen:
+         - Prozedural
+         - Objektorientiert
+         - Logisch
 
 <-- v -->
 
@@ -16,7 +23,7 @@ todo
 
 <<= x =>>
 
-<section tagcloud shuffle>
+<section tagcloud shuffle small>
     Immutability
     Higher Order Functions
     Monad
@@ -42,7 +49,9 @@ todo
     Event Sourcing/CQRS
 <section>
 
+
 <<= x =>>
+
 
 <!-- 
 <section tagcloud shuffle>
@@ -53,6 +62,39 @@ todo
     <span tagcloud-weight="5">Currying</span>
     <span tagcloud-weight="5">Currying</span>
 <section>     -->
+
+<<= x =>>
+
+## FP Konzepte
+
+<<= x =>>
+
+### Immutability
+- Lambdas: Sprachfeatures verwenden (LINQ, Streaming API)
+- Value Objects ("fight primitive obsession")
+
+<<= x =>>
+
+### Mehr Rechte für Funktionen! 
+- Expressions statt Statements
+- Higher Order Functions: Methoden können auch Funktionen zurückgeben
+    - &#10137; Currying/Applicative Functions
+
+<<= x =>>
+
+### Composition
+- Funktionen miteinander kombinieren (Alternative zu Ableitung in OO)
+    - &#10137; kann IoC ersetzen
+
+<<= x =>>
+
+### Safety through Types
+- Stärkeres Typsystem kann Entwicklung erleichtern
+    - DU
+    - Wrapper wie Option, Either, etc
+    
+    
+
 
 <<= x =>>
 
