@@ -56,17 +56,19 @@
          * @return {Number} the percentage to set the font size to
          **/
         function calcPercentage(elem) {
-            var percentage;
+            var percentage,
+                minimalPercentageValue = 50,
+                defaultMultiplier = 150;
 
             // At least one of our cloud items is weighted, base sizes around weights
             if( weights.length > 0 ) {
                 var itemWeight = elem.getAttribute('tagcloud-weight') || 0;
                 var numerator = itemWeight - lowerBound;
-                percentage = (numerator / denominator) * 150 + 50;
+                percentage = (numerator / denominator) * defaultMultiplier + minimalPercentageValue;
             }
             // None of the cloud items are weighted, base the size randomly
             else {
-                percentage = Math.random() * 150 + 50;
+                percentage = Math.random() * defaultMultiplier + minimalPercentageValue;
             }
 
             if (cloud.hasAttribute('large')) {
