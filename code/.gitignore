@@ -1,3 +1,8 @@
 bin
 obj
 *.user
+.vs
+.suo
+*.ide
+*.ide*
+_Resharper*

@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27130.2026
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DemoTest", "DemoTest\DemoTest.csproj", "{9F45FCF0-E1F5-4903-A5A3-146EE43D07C0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DemoTest", "DemoTest\DemoTest.csproj", "{9F45FCF0-E1F5-4903-A5A3-146EE43D07C0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LanguageExtDemo", "LanguageExtDemo\LanguageExtDemo.csproj", "{A0361199-B537-4C37-90F6-2E1FCE6D3F42}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{9F45FCF0-E1F5-4903-A5A3-146EE43D07C0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9F45FCF0-E1F5-4903-A5A3-146EE43D07C0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9F45FCF0-E1F5-4903-A5A3-146EE43D07C0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A0361199-B537-4C37-90F6-2E1FCE6D3F42}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A0361199-B537-4C37-90F6-2E1FCE6D3F42}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A0361199-B537-4C37-90F6-2E1FCE6D3F42}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A0361199-B537-4C37-90F6-2E1FCE6D3F42}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
