@@ -15,12 +15,6 @@ Patrick Drechsler
          - Objektorientiert
          - Logisch
 
-<-- v -->
-
-todo
-
-<!-- ![noborder-fixed](resources/transitive-dependency-1.png) -->
-
 <<= x =>>
 
 <section tagcloud shuffle small>
@@ -60,6 +54,44 @@ todo
 - Lambdas: Sprachfeatures verwenden (LINQ, Streaming API)
 - Value Objects ("fight primitive obsession")
 
+<-- v -->
+
+```javascript
+let list = [1, 2, 3, 4, 5];
+for (let i = 0; i < list.length; i++) {
+    list[i] = list[i] + 1;
+}
+console.log(list)
+```
+
+```javascript
+let list = [1, 2, 3, 4, 5];
+let result = list.map(x -> x + 1);
+console.log(list)
+```
+
+<-- v -->
+
+```csharp
+public Risk CheckRisk(int age)
+{
+    if (age <= 0) { /* error handling */ }
+    else if (age > 120) { /* error handling */ }
+    else if (age < 20) { return Risk.Low }
+    else if (age < 40) { return Risk.Medium }
+    else { return Risk.High }
+}
+```
+
+```csharp
+public Risk CheckRisk(Age age)
+{
+    if (age < 20) { return Risk.Low }
+    else if (age < 40) { return Risk.Medium }
+    else { return Risk.High }
+}
+```
+
 <<= x =>>
 
 ### Mehr Rechte für Funktionen! 
@@ -67,11 +99,53 @@ todo
 - Higher Order Functions: Methoden können auch Funktionen zurückgeben
     - &#10137; Currying/Applicative Functions
 
+<-- v -->
+
+#### Expressions
+
+```csharp
+public int AddOne(int i)
+{
+    return i + 1;
+}
+```
+
+```csharp
+public int AddOne(int i) => i + 1;
+```
+
+<-- v -->
+
+#### Higher Order Functions
+
+```csharp
+Func<int, bool> IsDivisibleBy(int divisor) => number 
+    => number % divisor == 0;
+
+var isDivisibleByFive = IsDivisibleBy(5);
+isDivisibleByFive(10); // TRUE
+```
+
 <<= x =>>
 
 ### Composition
 - Funktionen miteinander kombinieren (Alternative zu Ableitung in OO)
     - &#10137; kann IoC ersetzen
+
+<-- v -->
+
+#### Composition
+
+```csharp
+Func<int, bool> isLargerThanFive = x => x > 5;
+Func<int, bool> isSmallerThenTen = x => x < 10;
+
+Func<int, bool> isBetweenFiveAndTen = x => 
+    isLargerThanFive(x) && isSmallerThenTen(x);
+
+isBetweenFiveAndTen(7)
+    .Should().BeTrue();
+```
 
 <<= x =>>
 
