@@ -267,7 +267,7 @@ type AccountState = {
 }
 
 type AccountState with
-member this.WithStatus(status) = { this with Status = Active }
+member this.WithStatus(status) = { this with Status = status }
 member this.Add(transaction) = 
     { this with TransactionHistory = 
         transaction :: this.TransactionHistory }
