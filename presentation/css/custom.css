@@ -54,6 +54,10 @@
     font-size: medium;
 }
 
+.reveal .slides .too-much-content {
+    font-size: 80%;
+}
+
 /* Only for debugging */
 /*.slides section.present p .small {
     font-size: 20px;

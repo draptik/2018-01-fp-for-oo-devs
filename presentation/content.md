@@ -1,4 +1,4 @@
-# Funktionale Programmierung 
+# Funktionale Programmierung
 ## für OO Entwickler
 
 Patrick Drechsler
@@ -283,6 +283,22 @@ member this.Add(transaction) =
 - HOF
 - Composition
 - Typsystem
+
+<<= x =>>
+
+Vorschläge?
+<div class="too-much-content">
+<ul>
+<li>welche FP Konzepte sind für OO Programmierer interessant?</li>
+<li>**in welcher Reihenfolge sollte diese Konzepte vorgestellt werden?**</li>
+<li>Konzepte: immutability, lambdas (filter/map/reduce), applicatives, HOF, option, typed FP</li>
+<li>**was wird immer falsch gemacht bei der Einführung in FP?**</li>
+<li>was sind die einfachen, was die schwierigen Konzepte von FP?</li>
+<li>**welche Konzepte beißen sich (OO vs FP)?**</li>
+<li>**Erfahrungen aus der Praxis**</li>
+<li>Unterschiede beim Testing (FP Leute machen gerne REPL plus Property Based Testing)</li>
+</ul>
+</div>
 
 <<= x =>>
 
