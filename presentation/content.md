@@ -143,7 +143,7 @@ isDivisibleByFive(10); // TRUE
 
 <-- v -->
 
-#### Composition
+#### Composition (C&#35;)
 
 ```csharp
 Func<int, bool> isLargerThanFive = x => x > 5;
@@ -157,7 +157,7 @@ isBetweenFiveAndTen(7).Should().BeTrue();
 
 <-- v -->
 
-#### Composition
+#### Composition (C&#35;)
 
 ```csharp
 static string Abbreviate(string s) => s.SubString(0, 2).ToLower();
@@ -184,6 +184,29 @@ static string AppendDomain(this string localPart)
     => $"{localPart}@company.com";
 
 joe.AbbreviateName().AppendDomain().Should().Be("josm@company.com");
+```
+
+<-- v -->
+
+#### Composition (F&#35;)
+
+```fsharp
+let add1 x = x + 1
+let times2 x = x * 2
+
+let add1Times2 x = times2(add1 x) // ok...
+
+let add1Times2 = add1 >> times2   // composition operator
+```
+
+```fsharp
+type Person = { FirstName: string; LastName: string }
+let p = {FirstName = "Joe"; LastName = "Smith"}
+let abbreviate (s: string) = s.[0..1].ToLower()
+let abbreviateName p = abbreviate(p.FirstName) + abbreviate(p.LastName)
+let appendDomain (s: string) = s + "@company.com"
+let emailFor = abbreviateName >> appendDomain
+p |> emailFor // josm@company.com
 ```
 
 <<= x =>>
