@@ -60,6 +60,7 @@ Patrick Drechsler
 
 das ist ok:
 ```javascript
+// JavaScript
 let list = [1, 2, 3, 4, 5];
 for (let i = 0; i < list.length; i++) {
     list[i] = list[i] + 1;
@@ -69,6 +70,7 @@ console.log(list)
 
 ...aber das einfacher:
 ```javascript
+// JavaScript
 let list = [1, 2, 3, 4, 5];
 let result = list.map(x -> x + 1); // oder eine "addOne" Funktion nehmen
 console.log(list)
@@ -78,7 +80,7 @@ console.log(list)
 
 ok...
 ```csharp
-public Risk CheckRisk(int age)
+public Risk CheckRisk(int age) // <- primitive obsession
 {
     if (age <= 0) { /* error handling */ }
     else if (age > 120) { /* error handling */ }
@@ -101,8 +103,8 @@ public Risk CheckRisk(Age age)
 <<= x =>>
 
 ### Mehr Rechte für Funktionen! 
-- Expressions statt Statements
-- Higher Order Functions: Methoden können auch Funktionen zurückgeben
+- **Expressions** statt Statements
+- **Higher Order Functions**: Methoden können auch Funktionen zurückgeben
     - &#10137; Currying/Applicative Functions
 
 <-- v -->
@@ -126,12 +128,24 @@ public int AddOne(int i) => i + 1;
 
 #### Higher Order Functions
 
+C#
 ```csharp
-Func<int, bool> IsDivisibleBy(int divisor) => number 
-    => number % divisor == 0;
-
+// int -> (int -> bool)
+Func<int, bool> IsDivisibleBy(int divisor) => num => num % divisor == 0;
+// (int -> bool)
 var isDivisibleByFive = IsDivisibleBy(5);
+
 isDivisibleByFive(10); // TRUE
+```
+
+F#
+```fsharp
+// int -> (int -> bool)
+let isDivisibleBy divisor = (fun num -> num % divisor = 0)
+// (int -> bool)
+let isDivisibleByFive = isDivisibleBy 5
+
+10 |> isDivisibleByFive // TRUE
 ```
 
 <<= x =>>
@@ -152,7 +166,7 @@ Func<int, bool> isSmallerThenTen = x => x < 10;
 Func<int, bool> isBetweenFiveAndTen = x => 
     isLargerThanFive(x) && isSmallerThenTen(x);
 
-isBetweenFiveAndTen(7).Should().BeTrue();
+isBetweenFiveAndTen(7); // TRUE
 ```
 
 <-- v -->
@@ -196,7 +210,7 @@ let times2 x = x * 2
 
 let add1Times2 x = times2(add1 x) // ok...
 
-let add1Times2 = add1 >> times2   // composition operator
+let add1Times2 = add1 >> times2   // ">>": composition operator
 ```
 
 ```fsharp
@@ -231,7 +245,7 @@ public string Greet(int id)
 
 <-- v -->
 
-#### Typsystem (Bsp. F#)
+#### Typsystem mit Business-Logik (F#)
 
 ```fsharp
 type AccountStatus = // discriminated union
