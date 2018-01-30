@@ -31,6 +31,7 @@ Patrick Drechsler
     <span tagcloud-weight="39">honest functions </span>
     <span tagcloud-weight="19">Functor </span>
     <span tagcloud-weight="50">Immutability </span>
+    <span tagcloud-weight="34">category theory </span>
     <span tagcloud-weight="15">Monoid </span>
     <span tagcloud-weight="29">tuples  </span> 
     <span tagcloud-weight="17">discriminated unions </span>
@@ -39,9 +40,9 @@ Patrick Drechsler
     <span tagcloud-weight="28">Either </span>
     <span tagcloud-weight="34">Option </span>
     <span tagcloud-weight="14">arrow notation </span>
+    <span tagcloud-weight="24">railway oriented programming </span>
     <span tagcloud-weight="26">Lambda </span>
     <span tagcloud-weight="12">Composition </span>
-    <span tagcloud-weight="24">category theory </span>
 <section>
 
 
