@@ -1,4 +1,5 @@
-## FP for OO developers
+# Funktionale Programmierung 
+## für OO Entwickler
 
 Patrick Drechsler
 
