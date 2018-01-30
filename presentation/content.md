@@ -18,12 +18,12 @@ Patrick Drechsler
 <<= x =>>
 
 <section tagcloud large>
-    <span tagcloud-weight="17">Unit </span>
+    <span tagcloud-weight="16">Unit </span>
     <span tagcloud-weight="44">Currying </span>
-    <span tagcloud-weight="30">Higher Order Functions </span>
+    <span tagcloud-weight="29">Higher Order Functions </span>
     <span tagcloud-weight="10">Event Sourcing/CQRS </span>
     <span tagcloud-weight="35">Applicatives </span>
-    <span tagcloud-weight="12">Monad </span>
+    <span tagcloud-weight="13">Monad </span>
     <span tagcloud-weight="30">filter/map/reduce </span>
     <span tagcloud-weight="18">bind </span>
     <span tagcloud-weight="40">side effects </span>
@@ -31,16 +31,17 @@ Patrick Drechsler
     <span tagcloud-weight="39">honest functions </span>
     <span tagcloud-weight="19">Functor </span>
     <span tagcloud-weight="50">Immutability </span>
-    <span tagcloud-weight="10">Monoid </span>
-    <span tagcloud-weight="15">tuples  </span> 
+    <span tagcloud-weight="15">Monoid </span>
+    <span tagcloud-weight="29">tuples  </span> 
     <span tagcloud-weight="17">discriminated unions </span>
     <span tagcloud-weight="20">elevated types </span>
     <span tagcloud-weight="33">Typed FP </span>
-    <span tagcloud-weight="29">Either </span>
-    <span tagcloud-weight="35">Option </span>
-    <span tagcloud-weight="12">arrow notation </span>
+    <span tagcloud-weight="28">Either </span>
+    <span tagcloud-weight="34">Option </span>
+    <span tagcloud-weight="14">arrow notation </span>
     <span tagcloud-weight="26">Lambda </span>
     <span tagcloud-weight="12">Composition </span>
+    <span tagcloud-weight="24">category theory </span>
 <section>
 
 
