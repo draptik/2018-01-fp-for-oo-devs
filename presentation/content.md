@@ -57,7 +57,7 @@ Patrick Drechsler
 - Lambdas: Sprachfeatures verwenden (LINQ, Streaming API)
 - Value Objects ("fight primitive obsession")
 
-Immutability ist die Voraussetzung für alle weiteren FP Konzepte.
+Immutability ist eine häufige Voraussetzung für viele weiteren FP Konzepte.
 
 <-- v -->
 
@@ -159,21 +159,24 @@ let isDivisibleByFive = isDivisibleBy 5
 
 #### Composition
 
-```csharp
-Func<int, bool> isLargerThanFive = x => x > 5;
-Func<int, bool> isSmallerThenTen = x => x < 10;
+<pre>
+<code data-noescape data-trim class="lang-csharp hljs">
+Func&lt;int, bool> isLargerThanFive = x => x > 5;
+Func&lt;int, bool> isSmallerThenTen = x => x < 10;
 
-Func<int, bool> isBetweenFiveAndTen = x => 
-    isLargerThanFive(x) && isSmallerThenTen(x);
+<span class="mycodemark-always">Func&lt;int, bool> isBetweenFiveAndTen = x => 
+    isLargerThanFive(x) && isSmallerThenTen(x);</span>
 
 isBetweenFiveAndTen(7); // TRUE
-```
+</code>
+</pre>
 
 <-- v -->
 
 #### Composition
 
-```csharp
+<pre>
+<code data-noescape data-trim class="lang-csharp hljs">
 static string Abbreviate(string s) => s.SubString(0, 2).ToLower();
 
 static string AbbreviateName(Person p) 
@@ -183,46 +186,56 @@ static string AppendDomain(string localPart)
     => $"{localPart}@company.com";
 
 // composition
-Func<Person, string> emailFor = p => AppendDomain(AbbreviateName(p));
+<span class="mycodemark-always">Func&lt;Person, string> emailFor = p => AppendDomain(AbbreviateName(p));</span>
 
 var joe = new Person("Joe", "Smith")
-emailFor(joe).Should().Be("josm@company.com");
-```
+<span class="mycodemark-always">emailFor(joe).Should().Be("josm@company.com");</span>
+</code>
+</pre>
 
-```csharp
+<pre>
+<code data-noescape data-trim class="lang-csharp hljs">
 // method chaining (using C# Extensions)
-static string AbbreviateName(this Person p) 
+static string AbbreviateName(<span class="mycodemark-always">this</span> Person p) 
     => Abbreviate(p.FirstName) + Abbreviate(p.LastName);
     
-static string AppendDomain(this string localPart) 
+static string AppendDomain(<span class="mycodemark-always">this</span> string localPart) 
     => $"{localPart}@company.com";
 
-joe.AbbreviateName().AppendDomain().Should().Be("josm@company.com");
-```
+<span class="mycodemark-always">joe.AbbreviateName().AppendDomain().Should().Be("josm@company.com");</span>
+</code>
+</pre>
 
 <-- v -->
 
 #### Composition
 
-```fsharp
+<pre>
+<code data-noescape data-trim class="lang-fsharp hljs">
 let add1 x = x + 1
 let times2 x = x * 2
 
 let add1Times2 x = times2(add1 x) // ok...
-
+<span class="mycodemark-always">
 let add1Times2 = add1 >> times2   // ">>": composition operator
-```
+</span>
+</code>
+</pre>
 
-```fsharp
+<pre>
+<code data-noescape data-trim class="lang-fsharp hljs">
 open System
 type Person = { FirstName: string; LastName: string }
 let p = {FirstName = "Joe"; LastName = "Smith"}
 let abbreviate (s: string) = s.[0..1].ToLower()
 let abbreviateName p = abbreviate(p.FirstName) + abbreviate(p.LastName)
 let appendDomain (s: string) = s + "@company.com"
+<span class="mycodemark-always">
 let emailFor = abbreviateName >> appendDomain
+</span>
 p |> emailFor // josm@company.com
-```
+</code>
+</pre>
 
 <<= x =>>
 
@@ -235,14 +248,16 @@ p |> emailFor // josm@company.com
 
 #### Typsystem
 
-```csharp
-public Option<Customer> GetCustomer(int id) { /* ... */ }
+<pre>
+<code data-noescape data-trim class="lang-csharp hljs">
+public <span class="mycodemark-always">Option&lt;Customer></span> GetCustomer(int id) { /* ... */ }
 
 public string Greet(int id) 
-    => GetCustomer(id).Match(
-            None: () => "Sorry, who?",
-            Some: (customer) => $"Hello, {customer.Name}");
-```    
+    => GetCustomer(id)<span class="mycodemark-always">.Match(
+            None:</span> () => "Sorry, who?",
+            <span class="mycodemark-always">Some:</span> (customer) => $"Hello, {customer.Name}");
+</code>
+</pre>
 
 <-- v -->
 
