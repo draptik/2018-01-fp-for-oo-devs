@@ -17,6 +17,8 @@
 
 		<link rel="stylesheet" href="resources/font-awesome-4.7.0/css/font-awesome.min.css">
 
+		<link rel="stylesheet" href="plugin/badges/badges.css">
+
 		<!-- Custom styling -->
 		<link rel="stylesheet" href="css/custom.css">
 		
@@ -61,8 +63,31 @@
 							hljs.initHighlightingOnLoad();
 						}
 					},
-					{ src: 'plugin/tagcloud/tagcloud.js', async: true }
-				]
+					{ src: 'plugin/tagcloud/tagcloud.js', async: true },
+					{ src: 'plugin/badges/badges.js'}
+				],
+				badges: {
+					path: 'plugin/badges',
+					languages: {
+						csharp: {
+							label: 'C#',
+							fg: 'gray',
+							bg: '#fdf6e3'
+						},
+						fsharp: {
+							label: 'F#',
+							fg: 'gray',
+							bg: '#fdf6e3'
+						},
+						javascript: {
+							label: 'Javascript',
+							fg: 'gray',
+							bg: '#fdf6e3'
+						}
+
+					}
+
+				}
 			});
 		</script>
 	</body>
