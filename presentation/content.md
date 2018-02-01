@@ -57,6 +57,8 @@ Patrick Drechsler
 - Lambdas: Sprachfeatures verwenden (LINQ, Streaming API)
 - Value Objects ("fight primitive obsession")
 
+Immutability ist die Voraussetzung für alle weiteren FP Konzepte.
+
 <-- v -->
 
 das ist ok:
@@ -91,6 +93,7 @@ public Risk CheckRisk(int age) // <- primitive obsession
 
 ...weniger "Krach":
 ```csharp
+// "Age": immutable value object
 public Risk CheckRisk(Age age)
 {
     if (age < 20) { return Risk.Low }
@@ -154,7 +157,7 @@ let isDivisibleByFive = isDivisibleBy 5
 
 <-- v -->
 
-#### Composition (C&#35;)
+#### Composition
 
 ```csharp
 Func<int, bool> isLargerThanFive = x => x > 5;
@@ -211,6 +214,7 @@ let add1Times2 = add1 >> times2   // ">>": composition operator
 ```
 
 ```fsharp
+open System
 type Person = { FirstName: string; LastName: string }
 let p = {FirstName = "Joe"; LastName = "Smith"}
 let abbreviate (s: string) = s.[0..1].ToLower()
