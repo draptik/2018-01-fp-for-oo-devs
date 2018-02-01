@@ -17,6 +17,12 @@ namespace DemoTest
 
             isBetweenFiveAndTen(7)
                 .Should().BeTrue();
+
+
+            Func<int, bool> IsDivisibleBy(int divisor) => num => num % divisor == 0;
+            var isDivisibleByFive = IsDivisibleBy(5);
+
+            isDivisibleByFive(10).Should().BeTrue();
         }
     }
 }
