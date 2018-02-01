@@ -249,6 +249,7 @@ public string Greet(int id)
 #### Typsystem mit Business-Logik (F#)
 
 ```fsharp
+open System
 type AccountStatus = // discriminated union
     Requested | Active | Frozen | Dormant | Closed
 
