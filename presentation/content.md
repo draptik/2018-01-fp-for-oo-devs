@@ -61,7 +61,6 @@ Patrick Drechsler
 
 das ist ok:
 ```javascript
-// JavaScript
 let list = [1, 2, 3, 4, 5];
 for (let i = 0; i < list.length; i++) {
     list[i] = list[i] + 1;
@@ -71,7 +70,6 @@ console.log(list)
 
 ...aber das einfacher:
 ```javascript
-// JavaScript
 let list = [1, 2, 3, 4, 5];
 let result = list.map(x -> x + 1); // oder eine "addOne" Funktion nehmen
 console.log(list)
@@ -129,7 +127,6 @@ public int AddOne(int i) => i + 1;
 
 #### Higher Order Functions
 
-C#
 ```csharp
 // int -> (int -> bool)
 Func<int, bool> IsDivisibleBy(int divisor) => num => num % divisor == 0;
@@ -139,7 +136,6 @@ var isDivisibleByFive = IsDivisibleBy(5);
 isDivisibleByFive(10); // TRUE
 ```
 
-F#
 ```fsharp
 // int -> (int -> bool)
 let isDivisibleBy divisor = (fun num -> num % divisor = 0)
@@ -172,7 +168,7 @@ isBetweenFiveAndTen(7); // TRUE
 
 <-- v -->
 
-#### Composition (C&#35;)
+#### Composition
 
 ```csharp
 static string Abbreviate(string s) => s.SubString(0, 2).ToLower();
@@ -203,7 +199,7 @@ joe.AbbreviateName().AppendDomain().Should().Be("josm@company.com");
 
 <-- v -->
 
-#### Composition (F&#35;)
+#### Composition
 
 ```fsharp
 let add1 x = x + 1
@@ -246,7 +242,7 @@ public string Greet(int id)
 
 <-- v -->
 
-#### Typsystem mit Business-Logik (F#)
+#### Typsystem mit Business-Logik
 
 ```fsharp
 open System
