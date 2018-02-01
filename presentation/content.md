@@ -287,18 +287,15 @@ member this.Add(transaction) =
 <<= x =>>
 
 Vorschläge?
-<div class="too-much-content">
-<ul>
-<li>welche FP Konzepte sind für OO Programmierer interessant?</li>
-<li>**in welcher Reihenfolge sollte diese Konzepte vorgestellt werden?**</li>
-<li>Konzepte: immutability, lambdas (filter/map/reduce), applicatives, HOF, option, typed FP</li>
-<li>**was wird immer falsch gemacht bei der Einführung in FP?**</li>
-<li>was sind die einfachen, was die schwierigen Konzepte von FP?</li>
-<li>**welche Konzepte beißen sich (OO vs FP)?**</li>
-<li>**Erfahrungen aus der Praxis**</li>
-<li>Unterschiede beim Testing (FP Leute machen gerne REPL plus Property Based Testing)</li>
-</ul>
-</div>
+<!-- .slide: class="too-much-content" -->
+- welche FP Konzepte sind für OO Programmierer interessant?
+- **in welcher Reihenfolge sollte diese Konzepte vorgestellt werden?**
+- Konzepte: immutability, lambdas (filter/map/reduce), applicatives, HOF, option, typed FP
+- **was wird immer falsch gemacht bei der Einführung in FP?**
+- was sind die einfachen, was die schwierigen Konzepte von FP?
+- **welche Konzepte beißen sich (OO vs FP)?**
+- **Erfahrungen aus der Praxis**
+- Unterschiede beim Testing (FP Leute machen gerne REPL plus Property Based Testing)
 
 <<= x =>>
 
@@ -308,3 +305,21 @@ Kontaktinfos:
 
 - <i class="fa fa-twitter" aria-hidden="true"></i>&nbsp;@drechsler
 - <i class="fa fa-envelope" aria-hidden="true"></i>&nbsp;socialcoding@pdrechsler.de
+
+
+<<= x =>>
+
+### Resources
+<!-- .slide: class="too-much-content" -->
+
+- Videos
+    - [One kata, 3 languages](https://www.youtube.com/watch?v=Ux5wUSOsEfc&t=1106s)
+    - [Functional Principles for Object-Oriented Development](https://www.youtube.com/watch?v=GpXsQ-NIKXY)
+    - [What Every Hipster Should Know About Functional Programming](https://vimeo.com/68331937)
+    - [Don't fear the Monad](https://www.youtube.com/watch?v=ZhuHCtR3xq8)
+- Blog
+    - [Less is more: language features](http://blog.ploeh.dk/2015/04/13/less-is-more-language-features/)
+    - [Partial Application in C#](http://mikehadlow.blogspot.de/2015/09/partial-application-in-c.html)
+- Books
+    - Functional Programming in C#. *Enrico Buonanno*
+    - Domain modeling made Functional. *Scott Wlaschin*
