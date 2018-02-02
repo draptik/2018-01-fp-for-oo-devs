@@ -73,8 +73,8 @@ console.log(list)
 ...aber das einfacher:
 ```javascript
 let list = [1, 2, 3, 4, 5];
-let result = list.map(x -> x + 1); // oder eine "addOne" Funktion nehmen
-console.log(list)
+let result = list.map(x => x + 1); // oder eine "addOne" Funktion nehmen
+console.log(result)
 ```
 
 <-- v -->
